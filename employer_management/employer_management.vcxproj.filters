@@ -24,12 +24,24 @@
     <ClCompile Include="Teacher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Assistant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Employment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Teacher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Assistant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TA.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
