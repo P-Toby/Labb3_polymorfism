@@ -3,12 +3,14 @@
 #include "Teacher.h"
 #include "Assistant.h"
 #include "TA.h"
+#include "Employee.h"
 
 using namespace std;
 
 int main()
 {
 	//TEST OBJECT
+	/*
 	Employment* t = new Teacher("Professor", true, 40000, 1500, true, "Math");
 	cout << t->toString() << endl << endl;
 
@@ -17,6 +19,13 @@ int main()
 
 	Employment* ta = new TA("Janitor", false, 25000, 1700, false, true);
 	cout << ta->toString() << endl << endl;
+	*/
+
+	Employment* empl = new Teacher("Adjunkt", false, 35000, 1600, true, "Programmering");
+
+	Employee* e = new Employee("Georg Boole", 1820, empl);
+
+	cout << e->toString() << endl;
 
 	system("pause");
 

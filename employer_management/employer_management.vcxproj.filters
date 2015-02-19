@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\SubClasses">
+      <UniqueIdentifier>{7adf6641-78a0-4b43-9cca-99d86ab8e241}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SubClasses">
+      <UniqueIdentifier>{19252367-6111-4197-b31b-9a42debf1db0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EM_Main.cpp">
@@ -21,13 +27,16 @@
     <ClCompile Include="Employment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Teacher.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Assistant.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\SubClasses</Filter>
     </ClCompile>
     <ClCompile Include="TA.cpp">
+      <Filter>Source Files\SubClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="Teacher.cpp">
+      <Filter>Source Files\SubClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="Employee.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,13 +44,16 @@
     <ClInclude Include="Employment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Teacher.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Assistant.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\SubClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Teacher.h">
+      <Filter>Header Files\SubClasses</Filter>
     </ClInclude>
     <ClInclude Include="TA.h">
+      <Filter>Header Files\SubClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Employee.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
