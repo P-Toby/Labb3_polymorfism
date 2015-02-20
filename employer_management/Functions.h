@@ -7,6 +7,8 @@
 int menu();
 bool boolChecker(std::string input);
 Employee* createTeacher();
+Employee* createAssistant();
+Employee* createTA();
 
 struct InputContainer
 {

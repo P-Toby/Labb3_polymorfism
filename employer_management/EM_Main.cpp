@@ -6,28 +6,20 @@
 #include "Employee.h"
 #include "Functions.h"
 #include "Container.h"
+#include <crtdbg.h>
 
 using namespace std;
 
 int main()
 {
-	//TEST OBJECT
-	/*
-	Employment* empl = new Teacher("Adjunkt", false, 35000, 1600, true, "Programmering");
-
-	Employee* e = new Employee("Georg Boole", 1820, empl);
-
-	cout << e->toString() << endl;
-	*/
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
 	Employee* empArr = nullptr;
 	InputContainer userInput;
+	Container EmployeeList;
 
 	int quit = 0;
 	int choice = 0; //Variable that is altered by user to decide which function to run.
-
-
-
 
 	while (quit != 1)
 	{
@@ -37,26 +29,31 @@ int main()
 		if (choice == 0)
 		{
 			//Quit
+			//FIX MEMLEAKS
+			delete[] empArr;
 			quit = 1;
 		}
 		else if (choice == 1)
 		{
-			Employee* test = createTeacher();
-
-			cout << endl << test->toString() << endl;
+			Employee* newTeacher = createTeacher();
+			EmployeeList.addEmployee(*newTeacher); //Add the new Teacher to the list of employees
+			
+			//delete newTeacher;
 		}
 		else if (choice == 2)
 		{
-
+			Employee* newAssistant = createAssistant();
+			EmployeeList.addEmployee(*newAssistant); 
 		}
 		else if (choice == 3)
 		{
-
-
+			Employee* newTA = createTA();
+			EmployeeList.addEmployee(*newTA);
 		}
 		else if (choice == 4)
 		{
-
+			cout << "The following Employees are in the database: " << endl;
+			cout << EmployeeList.toString();
 		}
 
 	}

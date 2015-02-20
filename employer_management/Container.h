@@ -9,12 +9,14 @@
 class Container
 {
 private:
-	Employee* empArr = nullptr;
-	int numOfEmployees = 0;
+	Employee* empArr;
+	int numOfEmployees;
 
 public:
 	Container();
+	~Container();
 	void addEmployee(Employee& employeeToAdd);
+	std::string toString();
 };
 
 #endif

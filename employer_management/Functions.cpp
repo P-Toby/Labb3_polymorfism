@@ -18,7 +18,7 @@ int menu()
 
 	while (isValid != 1)
 	{
-		cout << "Main menu:" << endl;
+		cout << "\nMain menu:" << endl;
 		cout << "\n0. Quit" << "\n1. New Teacher" << "\n2. New Assistant" << "\n3. New TA-staff" << "\n4. Show all staff" << endl;
 
 		printf("\nChoose which function to run: ");
@@ -64,14 +64,16 @@ Employee* createTeacher()
 	cout << "Birthyear: ";
 	cin >> userInput.birthYear;
 
-	//Teacher specific
+	cin.get();
+	//Employment specific
 	cout << "Employment type: ";
-	cin >> userInput.typeName;
+	getline(cin, userInput.typeName);
 	cout << "Salary: ";
 	cin >> userInput.wage;
 	cout << "Manager (y/n): ";
 	cin >> userInput.boolAsString;
 	userInput.isManager = boolChecker(userInput.boolAsString);
+	//Teacher specific
 	cout << "Working hours: ";
 	cin >> userInput.workingHours;
 	cout << "Main subject: ";
@@ -81,6 +83,74 @@ Employee* createTeacher()
 	userInput.isProgramManager = boolChecker(userInput.boolAsString);
 
 	Employment* empl = new Teacher(userInput.typeName, userInput.isManager, userInput.wage, userInput.workingHours, userInput.isProgramManager, userInput.mainSubject);
+
+	Employee* e = new Employee(userInput.name, userInput.birthYear, empl);
+
+	return e;
+}
+
+Employee* createAssistant()
+{
+	InputContainer userInput;
+	cin.get();
+	//Employee specific
+	cout << "Name: ";
+	getline(cin, userInput.name);
+	cout << "Birthyear: ";
+	cin >> userInput.birthYear;
+
+	cin.get();
+	//Employment specific
+	cout << "Employment type: ";
+	getline(cin, userInput.typeName);
+	cout << "Salary: ";
+	cin >> userInput.wage;
+	cout << "Manager (y/n): ";
+	cin >> userInput.boolAsString;
+	userInput.isManager = boolChecker(userInput.boolAsString);
+	//Assistant specific
+	cout << "Program: ";
+	cin >> userInput.studyProgram;
+	cout << "Points taken: ";
+	cin >> userInput.pointsTaken;
+
+	Employment* empl = new Assistant(userInput.typeName, userInput.isManager, userInput.wage,userInput.studyProgram,userInput.pointsTaken);
+
+	Employee* e = new Employee(userInput.name, userInput.birthYear, empl);
+
+	return e;
+}
+
+Employee* createTA()
+{
+	InputContainer userInput;
+	cin.get();
+	//Employee specific
+	cout << "Name: ";
+	getline(cin, userInput.name);
+	cout << "Birthyear: ";
+	cin >> userInput.birthYear;
+
+	cin.get();
+	//Employment specific
+	cout << "Employment type: ";
+	getline(cin, userInput.typeName);
+	cout << "Salary: ";
+	cin >> userInput.wage;
+	cout << "Manager (y/n): ";
+	cin >> userInput.boolAsString;
+	userInput.isManager = boolChecker(userInput.boolAsString);
+	//TA specific
+	cout << "Working hours: ";
+	cin >> userInput.wage;
+	cout << "Can certify (y/n): ";
+	cin >> userInput.boolAsString;
+	userInput.canCertify = boolChecker(userInput.boolAsString);
+	cout << "Superkey (y/n): ";
+	cin >> userInput.boolAsString;
+	userInput.hasSuperKey = boolChecker(userInput.boolAsString);
+
+	Employment* empl = new TA(userInput.typeName, userInput.isManager, userInput.wage, userInput.workingHours, userInput.canCertify, userInput.hasSuperKey);
 
 	Employee* e = new Employee(userInput.name, userInput.birthYear, empl);
 

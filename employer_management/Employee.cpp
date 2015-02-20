@@ -57,7 +57,15 @@ string Employee::toString()
 	
 }
 
+/*
+void Employee::operator=(const Employee& other)
+{
+	this->name = other.name;
+	this->birthYear = birthYear;
+	*this->position = *other.position;
+}
+*/
 Employee::~Employee()
 {
-	//Does nothing
+	delete position;
 }
