@@ -10,9 +10,10 @@ private:
 	std::string name;
 	int birthYear;
 	Employment* position;
-	Employee(); //Default constructor is not used
+	
 
 public:
+	Employee();
 	Employee(std::string name, int birthYear, Employment* position);
 
 	//toString function which is used to construct a string for printing

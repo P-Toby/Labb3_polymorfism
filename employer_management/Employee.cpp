@@ -3,6 +3,13 @@
 
 using namespace std;
 
+Employee::Employee()
+{
+	this->name = "DefaultName";
+	this->birthYear = 0;
+	this->position = nullptr;
+}
+
 Employee::Employee(string name, int birthYear, Employment* position)
 {
 	this->name = name;

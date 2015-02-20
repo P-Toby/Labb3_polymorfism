@@ -77,16 +77,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Assistant.cpp" />
+    <ClCompile Include="Container.cpp" />
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="Employment.cpp" />
     <ClCompile Include="EM_Main.cpp" />
+    <ClCompile Include="Functions.cpp" />
     <ClCompile Include="TA.cpp" />
     <ClCompile Include="Teacher.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Assistant.h" />
+    <ClInclude Include="Container.h" />
     <ClInclude Include="Employee.h" />
     <ClInclude Include="Employment.h" />
+    <ClInclude Include="Functions.h" />
     <ClInclude Include="TA.h" />
     <ClInclude Include="Teacher.h" />
   </ItemGroup>

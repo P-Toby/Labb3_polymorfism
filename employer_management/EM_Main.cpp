@@ -4,6 +4,8 @@
 #include "Assistant.h"
 #include "TA.h"
 #include "Employee.h"
+#include "Functions.h"
+#include "Container.h"
 
 using namespace std;
 
@@ -11,21 +13,53 @@ int main()
 {
 	//TEST OBJECT
 	/*
-	Employment* t = new Teacher("Professor", true, 40000, 1500, true, "Math");
-	cout << t->toString() << endl << endl;
-
-	Employment* a = new Assistant("Lab Assistant", false, 100, "Game And Software Engineering", 98);
-	cout << a->toString() << endl << endl;
-
-	Employment* ta = new TA("Janitor", false, 25000, 1700, false, true);
-	cout << ta->toString() << endl << endl;
-	*/
-
 	Employment* empl = new Teacher("Adjunkt", false, 35000, 1600, true, "Programmering");
 
 	Employee* e = new Employee("Georg Boole", 1820, empl);
 
 	cout << e->toString() << endl;
+	*/
+
+	Employee* empArr = nullptr;
+	InputContainer userInput;
+
+	int quit = 0;
+	int choice = 0; //Variable that is altered by user to decide which function to run.
+
+
+
+
+	while (quit != 1)
+	{
+
+		choice = menu();
+
+		if (choice == 0)
+		{
+			//Quit
+			quit = 1;
+		}
+		else if (choice == 1)
+		{
+			Employee* test = createTeacher();
+
+			cout << endl << test->toString() << endl;
+		}
+		else if (choice == 2)
+		{
+
+		}
+		else if (choice == 3)
+		{
+
+
+		}
+		else if (choice == 4)
+		{
+
+		}
+
+	}
 
 	system("pause");
 
