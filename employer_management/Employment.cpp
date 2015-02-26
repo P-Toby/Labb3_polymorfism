@@ -1,7 +1,15 @@
 #include "Employment.h"
 #include <string>
+#include <iostream>
 
 using namespace std;
+
+Employment::Employment()
+{
+	typeName = "Default type";
+	isManager = false;
+	wage = 0;
+}
 
 Employment::Employment(string typeName, bool isManager, int wage)
 {
@@ -74,4 +82,22 @@ bool Employment::getIsManager()
 Employment::~Employment()
 {
 	//Does nothing
+}
+
+Employment::Employment(const Employment& other)
+{
+	this->typeName = other.typeName;
+	this->isManager = other.isManager;
+	this->wage = other.wage;
+}
+
+void Employment::operator=(const Employment& other)
+{
+	cout << "ASSIGNEMNT OPERATOR OF EMPLOYMENT TRIGGERED" << endl;
+	typeName = other.typeName;
+	cout << "TYPENAME COPIED" << endl;
+	isManager = other.isManager;
+	cout << "ISMANAGER COPIED" << endl;
+	wage = other.wage;
+	cout << "WAGE COPIED" << endl;
 }

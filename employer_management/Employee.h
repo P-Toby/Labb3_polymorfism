@@ -11,11 +11,11 @@ private:
 	int birthYear;
 	Employment* position;
 	
-
 public:
 	Employee();
 	Employee(std::string name, int birthYear, Employment* position);
-	//void operator=(const Employee& other);
+	Employee(const Employee& other);
+	void operator=(const Employee& other);
 
 	//toString function which is used to construct a string for printing
 	virtual std::string toString();

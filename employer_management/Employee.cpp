@@ -1,4 +1,5 @@
 #include "Employee.h"
+#include "Employment.h"
 #include <string>
 
 using namespace std;
@@ -54,17 +55,30 @@ string Employee::toString()
 		result = "Name: " + name + "\nBirthyear: " + to_string(birthYear) + "\n";
 
 		return result + position->toString();
-	
 }
 
-/*
-void Employee::operator=(const Employee& other)
+
+Employee::Employee(const Employee& other) : position(other.position)
 {
 	this->name = other.name;
-	this->birthYear = birthYear;
-	*this->position = *other.position;
+	this->birthYear = other.birthYear;
 }
-*/
+
+void Employee::operator=(const Employee& other)
+{
+	if (position == nullptr) 
+	{ 
+		position = other.position; 
+	}
+	else 
+	{ 
+		*position = *other.position; 
+	}
+
+	this->name = other.name;
+	this->birthYear = other.birthYear;
+}
+
 Employee::~Employee()
 {
 	delete position;

@@ -30,7 +30,7 @@ int main()
 		{
 			//Quit
 			//FIX MEMLEAKS
-			delete[] empArr;
+
 			quit = 1;
 		}
 		else if (choice == 1)

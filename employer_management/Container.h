@@ -17,6 +17,9 @@ public:
 	~Container();
 	void addEmployee(Employee& employeeToAdd);
 	std::string toString();
+
+	int getNumOfEmployees();
+	Employee* getEmpArr();
 };
 
 #endif

@@ -13,6 +13,8 @@ private:
 
 public:
 	Employment(std::string typeName, bool isManager, int wage);
+	Employment(const Employment& other);
+	void operator=(const Employment& other);
 
 	//toString function which is used to construct a string for printing
 	virtual std::string toString();

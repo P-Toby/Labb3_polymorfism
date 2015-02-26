@@ -22,7 +22,7 @@ void Container::addEmployee(Employee& employeeToAdd)
 	}
 	else
 	{
-		//If we already have an initial array
+		//If we have an initial array
 		Employee* tmp = new Employee[numOfEmployees + 1];
 
 		for (int i = 0; i < numOfEmployees; ++i)
@@ -58,4 +58,14 @@ string Container::toString()
 Container::~Container()
 {
 	delete[] empArr;
+}
+
+int Container::getNumOfEmployees()
+{
+	return numOfEmployees;
+}
+
+Employee* Container::getEmpArr()
+{
+	return empArr;
 }
