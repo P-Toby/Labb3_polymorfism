@@ -33,7 +33,7 @@ struct InputContainer
 	//Assistant specific
 	std::string studyProgram;
 	int pointsTaken;
-	
+
 	//Employee name and birthyear
 	std::string name;
 	int birthYear;

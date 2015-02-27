@@ -10,20 +10,19 @@ Container::Container()
 	numOfEmployees = 0;
 }
 
-void Container::addEmployee(Employee& employeeToAdd)
+void Container::addEmployee(Employee* employeeToAdd)
 {
-
 	if (empArr == nullptr)
 	{
 		//If the current player has zero matches we will create an initial array that has room for 1 element
-		empArr = new Employee[1];
+		empArr = new Employee*[1];
 		empArr[0] = employeeToAdd;
 		numOfEmployees = numOfEmployees + 1;
 	}
 	else
 	{
 		//If we have an initial array
-		Employee* tmp = new Employee[numOfEmployees + 1];
+		Employee** tmp = new Employee*[numOfEmployees + 1];
 
 		for (int i = 0; i < numOfEmployees; ++i)
 		{
@@ -40,18 +39,15 @@ void Container::addEmployee(Employee& employeeToAdd)
 		empArr[numOfEmployees - 1] = employeeToAdd;
 
 	}
-
 }
 
 string Container::toString()
 {
-	//BREAKS IF THERE ARE MORE THAN TWO EMPLOYEES
-
 	string result;
 
 	for (int i = 0; i < numOfEmployees; ++i)
 	{
-		result = result + "\n" + empArr[i].toString() + "\n";
+		result = result + "\n" + empArr[i]->toString() + "\n";
 	}
 
 	return result;
@@ -59,15 +55,11 @@ string Container::toString()
 
 Container::~Container()
 {
+
+	for (int i = 0; i < numOfEmployees; ++i)
+	{
+		delete empArr[i];
+	}
+
 	delete[] empArr;
-}
-
-int Container::getNumOfEmployees()
-{
-	return numOfEmployees;
-}
-
-Employee* Container::getEmpArr()
-{
-	return empArr;
 }

@@ -50,11 +50,11 @@ Employment* Employee::getPosition()
 
 string Employee::toString()
 {
-		string result;
+	string result;
 
-		result = "Name: " + name + "\nBirthyear: " + to_string(birthYear) + "\n";
+	result = "Name: " + name + "\nBirthyear: " + to_string(birthYear) + "\n";
 
-		return result + position->toString();
+	return result + position->toString();
 }
 
 
@@ -66,13 +66,13 @@ Employee::Employee(const Employee& other) : position(other.position)
 
 void Employee::operator=(const Employee& other)
 {
-	if (position == nullptr) 
-	{ 
-		position = other.position; 
+	if (position == nullptr)
+	{
+		position = other.position;
 	}
-	else 
-	{ 
-		*position = *other.position; 
+	else
+	{
+		*position = *other.position;
 	}
 
 	this->name = other.name;

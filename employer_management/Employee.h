@@ -10,9 +10,9 @@ private:
 	std::string name;
 	int birthYear;
 	Employment* position;
-	
-public:
 	Employee();
+
+public:
 	Employee(std::string name, int birthYear, Employment* position);
 	Employee(const Employee& other);
 	void operator=(const Employee& other);

@@ -114,7 +114,7 @@ Employee* createAssistant()
 	cout << "Points taken: ";
 	cin >> userInput.pointsTaken;
 
-	Employment* empl = new Assistant(userInput.typeName, userInput.isManager, userInput.wage,userInput.studyProgram,userInput.pointsTaken);
+	Employment* empl = new Assistant(userInput.typeName, userInput.isManager, userInput.wage, userInput.studyProgram, userInput.pointsTaken);
 
 	Employee* e = new Employee(userInput.name, userInput.birthYear, empl);
 
@@ -142,7 +142,7 @@ Employee* createTA()
 	userInput.isManager = boolChecker(userInput.boolAsString);
 	//TA specific
 	cout << "Working hours: ";
-	cin >> userInput.wage;
+	cin >> userInput.workingHours;
 	cout << "Can certify (y/n): ";
 	cin >> userInput.boolAsString;
 	userInput.canCertify = boolChecker(userInput.boolAsString);

@@ -9,17 +9,14 @@
 class Container
 {
 private:
-	Employee* empArr;
+	Employee** empArr;
 	int numOfEmployees;
 
 public:
 	Container();
 	~Container();
-	void addEmployee(Employee& employeeToAdd);
+	void addEmployee(Employee* employeeToAdd);
 	std::string toString();
-
-	int getNumOfEmployees();
-	Employee* getEmpArr();
 };
 
 #endif

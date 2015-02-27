@@ -51,7 +51,7 @@ void Employment::setWage(int wage)
 	{
 		this->wage = wage;
 	}
-	
+
 }
 
 int Employment::getWage()
@@ -93,11 +93,7 @@ Employment::Employment(const Employment& other)
 
 void Employment::operator=(const Employment& other)
 {
-	cout << "ASSIGNEMNT OPERATOR OF EMPLOYMENT TRIGGERED" << endl;
 	typeName = other.typeName;
-	cout << "TYPENAME COPIED" << endl;
 	isManager = other.isManager;
-	cout << "ISMANAGER COPIED" << endl;
 	wage = other.wage;
-	cout << "WAGE COPIED" << endl;
 }
