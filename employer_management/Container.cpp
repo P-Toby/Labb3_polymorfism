@@ -45,6 +45,8 @@ void Container::addEmployee(Employee& employeeToAdd)
 
 string Container::toString()
 {
+	//BREAKS IF THERE ARE MORE THAN TWO EMPLOYEES
+
 	string result;
 
 	for (int i = 0; i < numOfEmployees; ++i)
